@@ -1,50 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Tables</title>
 </head>
+
 <body>
     <h4>Tables in HTML</h4>
     <hr>
-
     <!-- table_tag: used to make a table -->
+    <!-- thead_tag, tbody_tag, tfoot_tag: used to define table head, body & foot respectively -->
+
     <table border="">
+        <!-- caption_tag: used to add title/caption of a table -->
+        <caption>Table example in HTML</caption>
+
+        <!-- colgroup_tag: used to style specific columns of a table -->
+        <colgroup>
+            <col span="2" style="background-color: slateblue;">
+            <col span="2" style="background-color: greenyellow;">
+        </colgroup>
+
         <!-- tr_tag: used to make table row -->
-        <tr>
-            <th>Col1</th>
-            <th>Col2</th>
-            <th>Col3</th>
-            <th>Col4</th>
-        </tr>
-        <tr>
-            <!-- td_tag: used to insert table data -->
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Col1</th> <!-- th_tag: used to define table heading-->
+                <th>Col2</th>
+                <th>Col3</th>
+                <th>Col4</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <!-- td_tag: used to insert table data -->
+                <td colspan="2">1</td> <!-- colspan_attribute: used to span column cells -->
+                <!-- <td>2</td> -->
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td rowspan="2">12</td> <!-- rowspan_attribute: used to span row cells -->
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <!-- <td>16</td> -->
+            </tr>
+        </tbody>
 
-        <tr>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-        </tr>
-
-        <tr>
-            <td>9</td>
-            <td>10</td>
-            <td>11</td>
-            <td>12</td>
-        </tr>
-        <tr>
-            <td>13</td>
-            <td>14</td>
-            <td>15</td>
-            <td>16</td>
-        </tr>
+        <tfoot>
+            <tr>
+                <td>Total1</td>
+                <td>Total2</td>
+                <td>Total3</td>
+                <td>Total4</td>
+            </tr>
+        </tfoot>
     </table>
 
 </body>
