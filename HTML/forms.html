@@ -10,9 +10,12 @@
     <hr>
 
     <!-- form_tag: used to create form -->
+    <!-- action attribute: used to add JavaScript funtionalities -->
     <form action="">
         <!-- input_tag: used to take input from user, 
-         attributes: minlength, maxlength, required: specify mandatory input -->
+         attributes: minlength, maxlength, required: specify mandatory input, disabled, checked used with 'radio or checkbox' type -->
+    
+        <!-- input type: text:- used to take input as alphanumberic characters -->
         <label for="first_name">First Name:</label>
         <input type="text" name="userFirstName" id="first_name" placeholder="Your First Name" minlength="3" maxlength="15" required>
         <br><br>
@@ -25,14 +28,17 @@
         <input type="text" name="userFatherName" id="father_name" placeholder="Your Father's Name" required>
         <br><br>
 
+        <!-- input type: number:- used to take input as numbers -->
         <label for="age">Age:</label>
         <input type="number" name="userAge" id="age" placeholder="Your Age" required>
         <br><br>
 
+        <!-- input type: pass:- used to take input as password -->
         <label for="pass">Password:</label>
         <input type="password" name="userPassword" id="pass" required>
         <br><br>
 
+        <!-- input type: radio:- used to ask user to choose b/w multiple options -->
         <input type="radio" name="userGender" id="male" value="male">
         <label for="male">Male</label>
         <input type="radio" name="userGender" id="female" value="female">
@@ -41,6 +47,7 @@
         <label for="others">Others</label>
         <br><br>
 
+        <!-- input type: used to take input as checkbox -->
         <input type="checkbox" name="subject" id="c++" value="c++">
         <label for="c++">C++</label>
         <input type="checkbox" name="subject" id="python" value="python">
@@ -53,11 +60,34 @@
         <label for="reactjs">ReactJS</label>
         <br><br>
 
+        <!-- input type: used to take input as color -->
+        <label for="clr">Please select your fovorite color: </label>
+        <input type="color" name="userColor" id="clr">
+        <br><br>
+
+        <!-- How can we make Dropdown option in HTML? -->
+        <!-- select_tag: used to make dropdown menu using 'option_tag' inside 'select_tag' -->
+        <label for="paymentOption">Select Payment Options:</label>
+        <select name="payment" id="paymentOption">
+            <option value="">Select from below provide options</option>
+            <option value="GPay">Google Pay</option>
+            <option value="Paytm">Paytm</option>
+            <option value="PhonePe">PhonePe</option>
+            <option value="Navi">Navi UPI</option>
+            <option value="cod">Cash On Delivery</option>
+        </select>
+        <br><br>
+
+        <!-- textarea_tag: used to take long text just like feedback -->
+        <label for="feedback">Share Feedback:</label><br>
+        <textarea name="userFeedback" id="feedback" placeholder="Please enter your Feedback"></textarea>
+        <br><br>
+
+        <!-- input type: reset:- used to reset all input -->
+        <input type="reset">
 
 
-
-
-
+        <!-- <br><br> -->
         <input type="submit">
     </form>
 </body>
