@@ -53,18 +53,24 @@
             <h3>Book Now</h3>
             <form action="">
                 <label for="name">Name:</label>
-                <input type="text" name="name" id="name" placeholder="e.g., Arjun Kumar">
+                <input type="text" name="name" id="name" placeholder="e.g., Arjun Kumar" required>
+                
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="abc@example.com">
+                <input type="email" name="email" id="email" placeholder="abc@example.com" required>
+                
                 <label for="phone">Phone:</label>
-                <input type="tel" name="phone" id="phone" placeholder="9876543210">
+                <input type="tel" name="phone" id="phone" 
+                    minlength="10"
+                    maxlength="10"
+                    placeholder="e.g., 9876543210" 
+                    required>
+                
                 <button type="submit">Submit</button>
             </form>
         </section>
     </main>
     <footer>
         <p>Contact Us: info@laundrymart.com</p>
-        <p>Copyright &copy; All rights are reserved</p>
     </footer>
 </body>
 </html>
